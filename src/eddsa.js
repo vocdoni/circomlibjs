@@ -1,10 +1,11 @@
+import createBlakeHash from "blake-hash";
+import { Buffer } from "buffer";
 import { Scalar } from "ffjavascript";
 import buildBabyJub from "./babyjub.js";
-import buildPedersenHash from "./pedersen_hash.js";
 import buildMimc7 from "./mimc7.js";
-import { buildPoseidon } from "./poseidon_wasm.js";
 import buildMimcSponge from "./mimcsponge.js";
-import createBlakeHash from "blake-hash";
+import buildPedersenHash from "./pedersen_hash.js";
+import { buildPoseidon } from "./poseidon_wasm.js";
 
 export default async function buildEddsa() {
     const babyJub = await buildBabyJub("bn128");
